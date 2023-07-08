@@ -220,3 +220,133 @@ footer a:hover {
 .profile__logout:focus {
   color: black;
 }
+
+/* carousel */
+
+.carousel {
+  margin: 0 auto;
+  max-width: 980px;
+  margin-top: 36px;
+}
+
+ul.carousel__slides {
+  display: block;
+  position: relative;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.carousel__slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.carousel__slides input {
+  display: none;
+}
+
+.carousel__slide-container {
+  display: block;
+}
+
+.carousel__slide-img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.carousel__slide-img img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 400px;
+  color: #fff;
+}
+
+.carousel__controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.carousel__slide-img:hover + .carousel__controls label {
+  opacity: 0.5;
+}
+
+.carousel__controls label:hover {
+  opacity: 1;
+}
+
+.carousel__controls .carousel__slide-prev {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel__controls .carousel__slide-next {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel__dots .carousel__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .carousel__slide-container .carousel__slide-img {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .carousel__slide-container .carousel__controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel__dots label#img-dot-1,
+input#img-2:checked ~ .carousel__dots label#img-dot-2,
+input#img-3:checked ~ .carousel__dots label#img-dot-3 {
+  opacity: 1;
+}
+
+input:checked + .carousel__slide-container .nav label {
+  display: block;
+}
