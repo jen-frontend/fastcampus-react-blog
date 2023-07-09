@@ -163,6 +163,14 @@ footer a:hover {
   color: gray;
 }
 
+.post__no-post {
+  padding: 24px;
+  text-align: center;
+  color: gray;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+}
+
 /* post detail */
 
 .post__detail .post__title {
@@ -183,6 +191,10 @@ footer a:hover {
 
 .post__detail .post__text {
   padding: 20px 0px;
+}
+
+.post__text--pre-wrap {
+  white-space: pre-wrap;
 }
 
 /* profile */
