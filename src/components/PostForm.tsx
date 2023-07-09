@@ -103,13 +103,17 @@ export default function PostForm() {
   }, [params?.id]);
 
   useEffect(() => {
-    if (post) {
-      setTitle(post?.title);
-      setSummary(post?.summary);
-      setContent(post?.content);
-      setCategory(post?.category as CategoryType);
-    }
-  }, [post]);
+    if (post && user)
+      if (post.uid === user.uid) {
+        setTitle(post?.title);
+        setSummary(post?.summary);
+        setContent(post?.content);
+        setCategory(post?.category as CategoryType);
+      } else {
+        navigate("/");
+        toast.error("접근 불가능한 페이지 입니다.");
+      }
+  }, [navigate, post, user]);
 
   return (
     <form onSubmit={onSubmit} className="form">
