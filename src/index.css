@@ -225,6 +225,8 @@ footer a:hover {
 .profile__logout {
   color: gray;
   font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .profile__logout:hover,
