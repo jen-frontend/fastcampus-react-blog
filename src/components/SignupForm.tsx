@@ -78,6 +78,7 @@ export default function SignupForm() {
           id="email"
           required
           onChange={onChange}
+          value={email}
         />
       </div>
       <div className="form__block">
@@ -88,6 +89,7 @@ export default function SignupForm() {
           id="password"
           required
           onChange={onChange}
+          value={password}
         />
       </div>
       <div className="form__block">
@@ -98,6 +100,7 @@ export default function SignupForm() {
           id="password_confirm"
           required
           onChange={onChange}
+          value={passwordConfirm}
         />
       </div>
       {error && error?.length > 0 && (
