@@ -141,7 +141,7 @@ export default function PostList({
                 <div className="post__title">{post?.title}</div>
                 <div className="post__text">{post?.summary}</div>
               </Link>
-              {post?.email === user?.email && (
+              {post?.uid === user?.uid && (
                 <div className="post__utils-box">
                   <div
                     className="post__delete"
