@@ -1,7 +1,7 @@
 # React Blog
 
 - React, Firebase를 이용한 리액트 블로그 프로젝트 입니다.
-- URL: https://react-blog-6fd95.web.app
+- URL: [https://fastcampus-react-blog.web.app/](https://fastcampus-react-blog.web.app/)
 
 <br />
 
