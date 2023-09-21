@@ -2,6 +2,7 @@
 
 - React, Firebase를 이용한 리액트 블로그 프로젝트 입니다.
 - URL: [https://fastcampus-react-blog.web.app/](https://fastcampus-react-blog.web.app/)
+- [Pull Request](https://github.com/jen-frontend/fastcampus-react-blog/pulls?q=is%3Apr+is%3Aclosed) 탭에서 각 기능별 코드를 확인하실 수 있습니다.
 
 <br />
 
